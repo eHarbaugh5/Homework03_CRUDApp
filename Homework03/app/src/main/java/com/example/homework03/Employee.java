@@ -4,15 +4,27 @@ public class Employee
 {
 
 
+    public Employee()
+    {
 
+
+
+    }
+
+    private String uName;
     private String fName;
     private String lName;
-    private String uName;
     private String password;
     private int age;
 
 
+    public String getuName() {
+        return uName;
+    }
 
+    public void setuName(String u) {
+        uName = u;
+    }
     public String getfName() {
         return fName;
     }
@@ -27,14 +39,6 @@ public class Employee
 
     public void setlName(String l) {
         lName = l;
-    }
-
-    public String getuName() {
-        return uName;
-    }
-
-    public void setuName(String u) {
-        uName = u;
     }
 
     public String getPassword() {

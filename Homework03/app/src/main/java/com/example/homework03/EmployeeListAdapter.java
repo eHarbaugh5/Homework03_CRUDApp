@@ -55,14 +55,11 @@ public class EmployeeListAdapter extends BaseAdapter
         TextView tv_j_fName_lName = view.findViewById(R.id.tv_v_fName_lName);
         TextView tv_j_uName = view.findViewById(R.id.tv_v_uName);
 
-        //  test data
-        //listOfEmployees.get(0).setfName("john");
-        //listOfEmployees.get(0).setlName("Smith");
-        //listOfEmployees.get(0).setuName("JSmith");
 
         //  get employee passed to me
         Employee employee = listOfEmployees.get(i);
         tv_j_fName_lName.setText(employee.getfName() + " " + employee.getlName());
+        tv_j_uName.setText(employee.getuName());
 
 
         return view;
