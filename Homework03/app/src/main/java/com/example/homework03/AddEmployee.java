@@ -74,8 +74,14 @@ public class AddEmployee extends AppCompatActivity {
                 Employee newEmployee = new Employee(et_j_add_uName.getText().toString(),et_j_add_fName.getText().toString(), et_j_add_lName.getText().toString(),et_j_add_email.getText().toString(),et_j_add_password.getText().toString(),et_j_add_age.getText().toString());
                 //  add employee given an employee
                 dbHelper.addNewEmployee(newEmployee);
-                //  return to mainActivity.java
-                startActivity(mainActivity);
+
+                et_j_add_uName.setText("");
+                et_j_add_fName.setText("");
+                et_j_add_lName.setText("");
+                et_j_add_age.setText("");
+                et_j_add_email.setText("");
+                et_j_add_password.setText("");
+
 
 
             }

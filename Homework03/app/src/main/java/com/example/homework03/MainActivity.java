@@ -1,3 +1,8 @@
+//  =========================================
+//  Evan Harbaugh
+//  10/28/23
+//  Employee CRUD application for an admin
+//  =========================================
 package com.example.homework03;
 
 import androidx.appcompat.app.AppCompatActivity;
