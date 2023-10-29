@@ -19,6 +19,7 @@ public class AddEmployee extends AppCompatActivity {
     Button btn_j_add_back;
     Button btn_j_add_add;
     Intent mainActivity;
+    DatabaseHelper dbHelper;
 
 
     @Override
@@ -35,9 +36,11 @@ public class AddEmployee extends AppCompatActivity {
         btn_j_add_back = findViewById(R.id.btn_v_add_back);
         btn_j_add_add = findViewById(R.id.btn_v_add_add);
 
+        dbHelper = new DatabaseHelper(this);
         mainActivity = new Intent(AddEmployee.this, MainActivity.class);
 
         backButtonEventHandler();
+        addButtonEventHandler();
 
     }
 
@@ -58,6 +61,28 @@ public class AddEmployee extends AppCompatActivity {
 
     }
 
+    public void addButtonEventHandler()
+    {
+
+        btn_j_add_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+
+
+                //  this makes an employee and gives it to the Database
+                Employee newEmployee = new Employee(et_j_add_uName.getText().toString(),et_j_add_fName.getText().toString(), et_j_add_lName.getText().toString(),et_j_add_email.getText().toString(),et_j_add_password.getText().toString(),et_j_add_age.getText().toString());
+                //  add employee given an employee
+                dbHelper.addNewEmployee(newEmployee);
+                //  return to mainActivity.java
+                startActivity(mainActivity);
+
+
+            }
+        });
+
+
+    }
 
 
 }

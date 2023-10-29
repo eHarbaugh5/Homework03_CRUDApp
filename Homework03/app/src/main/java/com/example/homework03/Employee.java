@@ -1,21 +1,34 @@
 package com.example.homework03;
 
-public class Employee
+import java.io.Serializable;
+
+public class Employee implements Serializable
 {
 
 
-    public Employee()
-    {
-
-
-
-    }
 
     private String uName;
     private String fName;
     private String lName;
+    private String email;
     private String password;
-    private int age;
+    private String age;
+
+    public Employee()
+    {
+
+    }
+
+     public Employee(String u, String f, String l, String e, String p, String a)
+     {
+         uName = u;
+         fName = f;
+         lName = l;
+         email = e;
+         password = p;
+         age = a;
+
+     }
 
 
     public String getuName() {
@@ -41,6 +54,13 @@ public class Employee
         lName = l;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public String getPassword() {
         return password;
     }
@@ -49,11 +69,11 @@ public class Employee
         password = p;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int a) {
+    public void setAge(String a) {
         age = a;
     }
 
