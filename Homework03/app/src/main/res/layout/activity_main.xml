@@ -18,7 +18,7 @@
         android:layout_marginStart="116dp"
         android:layout_marginTop="632dp"
         android:background="#000000"
-        android:text="Add User"
+        android:text="Add Employee"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/lv_v_listEmployees" />
 </androidx.constraintlayout.widget.ConstraintLayout>
